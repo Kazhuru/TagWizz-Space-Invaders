@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LaserShredder : MonoBehaviour
+{
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(LayerMask.LayerToName(collision.gameObject.layer) == "Laser")
+            Destroy(collision.gameObject);
+    }
+}
