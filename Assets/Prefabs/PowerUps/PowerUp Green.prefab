@@ -53,6 +53,7 @@ MonoBehaviour:
   laserShotInterval: 0.4
   laserShotDamage: 3
   laserShotSFX: {fileID: 8300000, guid: 473c582a19874414895eb784f79fb35a, type: 3}
+  laserVolume: 0.1
 --- !u!212 &301779782493155574
 SpriteRenderer:
   m_ObjectHideFlags: 0

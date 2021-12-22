@@ -4819,7 +4819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameMusic: {fileID: 8300000, guid: e5bcae363a4df554baf65ae87beb026e, type: 3}
-  gameMusicVolume: 0.15
+  gameMusicVolume: 0.25
 --- !u!82 &5660172104103919274
 AudioSource:
   m_ObjectHideFlags: 0

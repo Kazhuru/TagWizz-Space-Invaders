@@ -169,7 +169,7 @@ MonoBehaviour:
   lifes: 1
   score: 1
   enemyDeadSFX: {fileID: 8300000, guid: 6a341392387b69e4e9e95fc44abc60a4, type: 3}
-  enemyDeadVolume: 0.3
+  enemyDeadVolume: 0.2
 --- !u!114 &-8033978363524267154
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,6 +21,7 @@ public class PlayerAttack : MonoBehaviour
     private float currentLaserInterval;
     private int currentLaserDamage;
     private AudioClip currentLaserSFX;
+    private float currentLaserVolume;
     private Coroutine powerupCoroutine;
 
     void Start()
@@ -68,7 +69,7 @@ public class PlayerAttack : MonoBehaviour
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, currentLaserSpeed);
             if (currentLaserSFX != null)
             {
-                AudioSource.PlayClipAtPoint(currentLaserSFX, Camera.main.transform.position, laserVolume);
+                AudioSource.PlayClipAtPoint(currentLaserSFX, Camera.main.transform.position, currentLaserVolume);
             }
         }
     }
@@ -107,6 +108,7 @@ public class PlayerAttack : MonoBehaviour
         currentLaserInterval = powerup.LaserShotInterval;
         currentLaserDamage = powerup.LaserShotDamage;
         currentLaserSFX = powerup.LaserShotSFX;
+        currentLaserVolume = powerup.LaserVolume;
         yield return new WaitForSeconds(powerup.PowerupDuration);
         StatsValuesToDefault();
     }
@@ -118,6 +120,7 @@ public class PlayerAttack : MonoBehaviour
         currentLaserInterval = laserShotInterval;
         currentLaserDamage = laserShotDamage;
         currentLaserSFX = laserShotSFX;
+        currentLaserVolume = laserVolume;
     }
 
     public int GetCurrentLaserDamage { get => currentLaserDamage; }
